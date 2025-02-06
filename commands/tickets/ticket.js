@@ -128,18 +128,13 @@ module.exports = {
 
                     const logEmbed = new EmbedBuilder()
                     .setTitle('📜 Ticket Closed')
-                    .setDescription(`Ticket telah ditutup oleh <@${interaction.user.id}>.`)
                     .addFields(
                         { name: '👤 Ditutup oleh', value: `<@${interaction.user.id}>`, inline: true },
                         { name: '📁 Channel', value: `${channel.name}`, inline: true },
                         { name: '🕒 Waktu', value: `<t:${Math.floor(Date.now() / 1000)}:F>`, inline: false }
                     )
                     .setColor(0xFF0000)
-                    .setFooter({
-                        text: `ID User: ${interaction.user.id}`,
-                        iconURL: interaction.user.displayAvatarURL({ dynamic: true })
-                    })
-                    .setThumbnail(interaction.user.displayAvatarURL({ dynamic: true }))
+                    .setFooter({iconURL: interaction.user.displayAvatarURL({ dynamic: true })})
                     .setTimestamp();
                 
                 await logChannel.send({ embeds: [logEmbed] });
