@@ -1,7 +1,7 @@
 const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, PermissionsBitField } = require('discord.js');
 
 // Konstanta yang digunakan
-const CATEGORY_ID = '1335173385264697354';
+const CATEGORY_ID = '1336977574424875060';
 const LOG_CHANNEL_ID = '1335122622643572757'; // Ganti dengan ID channel log-mu
 const OWNER_ROLE_ID = '1335315132846440583';
 const CO_OWNER_ROLE_ID = '1335315294507372595';
