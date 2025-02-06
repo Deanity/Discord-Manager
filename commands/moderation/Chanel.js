@@ -67,9 +67,9 @@ module.exports = {
       // Membuat embed untuk menampilkan informasi channel yang baru dibuat
       const embed = new EmbedBuilder()
         .setTitle('✅ Channel Berhasil Dibuat!')
-        .addField('Nama Channel:', newChannel.name)
-        .addField('Tipe Channel:', channelTypeString)
-        .addField('Kategori:', parentCategory ? parentCategory.name : 'Tidak ada kategori');
+        .addFields('Nama Channel:', newChannel.name)
+        .addFields('Tipe Channel:', channelTypeString)
+        .addFields('Kategori:', parentCategory ? parentCategory.name : 'Tidak ada kategori');
 
       await interaction.reply({ embeds: [embed] });
     } catch (error) {
