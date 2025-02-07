@@ -134,8 +134,8 @@ module.exports = {
                         { name: '🕒 Waktu', value: `<t:${Math.floor(Date.now() / 1000)}:F>`, inline: false }
                     )
                     .setColor(0xFF0000)
-                    .setFooter({iconURL: interaction.user.displayAvatarURL({ dynamic: true })})
-                    .setTimestamp();
+                    .setFooter({ text: 'Sistem Ticket', iconURL: interaction.user.displayAvatarURL({ dynamic: true }) })
+                    .setTimestamp();                
                 
                 await logChannel.send({ embeds: [logEmbed] });
                 
