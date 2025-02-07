@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits, Collection } = require('discord.js');
+const { Client, GatewayIntentBits, Collection, ActivityType } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
 require('dotenv').config(); // Load token dari .env
@@ -45,8 +45,20 @@ for (const file of messageCommandFiles) {
 }
 
 // Event: Ready
-client.once('ready', () => {
-  console.log(`✅ Bot ${client.user.tag} telah online!`);
+client.once('ready', async () => {
+  console.log(`${client.user.tag} is online!`);
+
+  // Fungsi untuk update status bot
+  const updateActivity = async () => {
+      try {
+          client.user.setActivity('Boolua Script', { type: ActivityType.Playing });
+          console.log(`Updated activity: Playing Dezaa Manager`);
+      } catch (error) {
+          console.error('Error updating activity:', error);
+      }
+  };
+
+  await updateActivity(); // Set aktivitas saat bot menyala
 });
 
 // Event: Interaction Create (Menjalankan Slash Command)
