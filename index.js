@@ -51,7 +51,7 @@ client.once('ready', async () => {
   // Fungsi untuk update status bot
   const updateActivity = async () => {
       try {
-          client.user.setActivity('Boolua Script', { type: ActivityType.Playing });
+          client.user.setActivity('Dezaa Manager', { type: ActivityType.Playing });
           console.log(`Updated activity: Playing Dezaa Manager`);
       } catch (error) {
           console.error('Error updating activity:', error);
