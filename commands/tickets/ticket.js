@@ -68,17 +68,13 @@ module.exports = {
             const embed = new EmbedBuilder()
                 .setColor(0x00FF00)
                 .setDescription(`🎟️ **Tiket Dibuat!**  
-                Terima kasih telah membuat tiket, <@${interaction.user.id}>! Tim kami akan segera membantu Anda.  
-            
-                **📌 Detail Tiket:**  
-                🔹 **ID:** \`${ticketCounter - 1}\`  
-                🔹 **Status:** Dibuat`)
+                Terima kasih telah membuat tiket, <@${interaction.user.id}>! \n Tim kami akan segera membantu Anda.`)
                 .setTimestamp()
                 .setFooter({ 
                     text: `Dibuat oleh ${interaction.user.tag}`, 
                     iconURL: interaction.user.displayAvatarURL({ dynamic: true }) 
                 });
-                
+
             const closeButton = new ButtonBuilder()
                 .setCustomId('close_ticket')
                 .setLabel('❌ Close Ticket')
