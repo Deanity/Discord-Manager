@@ -62,12 +62,12 @@ module.exports = {
             });
 
             // Kirim pesan mention untuk notifikasi ke Owner dan Co-Owner
-            await ticketChannel.send(`🔔 Hai <@&${OWNER_ROLE_ID}> dan <@&${CO_OWNER_ROLE_ID}>, tiket baru telah dibuat oleh <@${interaction.user.id}>!`);
+            await ticketChannel.send(`🔔 Hai <@&${OWNER_ROLE_ID}> dan <@&${CO_OWNER_ROLE_ID}> \n Tiket baru telah dibuat oleh <@${interaction.user.id}>!`);
 
             // Membuat embed untuk detail tiket
             const embed = new EmbedBuilder()
                 .setColor(0x00FF00)
-                .setDescription(`🎟️ **Tiket Dibuat!**  
+                .setDescription(`🎫 **Tiket Dibuat!**  
                 Terima kasih telah membuat tiket, <@${interaction.user.id}>! \n Tim kami akan segera membantu Anda.`)
                 .setTimestamp()
                 .setFooter({ 
@@ -88,15 +88,14 @@ module.exports = {
             await channel.setName(`closed-${channel.name.split('-')[1]}`);
 
             const embed = new EmbedBuilder()
-            .setTitle('🔒 Ticket Closed')
-            .setDescription(`🛑 **Tiket dari** <@${interaction.user.id}> telah ditutup.\n\n📌 Jika Anda masih membutuhkan bantuan, silakan buat tiket baru.`)
             .setColor(0xFF0000)
-            .setThumbnail(interaction.user.displayAvatarURL({ dynamic: true }))
+            .setDescription(`🔒 **Tiket ditutup!**  
+            Tiket dari <@${interaction.user.id}> telah ditutup.`)
             .setTimestamp()
             .setFooter({
                 text: `Ditutup oleh ${interaction.user.tag}`,
                 iconURL: interaction.user.displayAvatarURL({ dynamic: true }),
-            });        
+            });                
 
             const reopenButton = new ButtonBuilder()
                 .setCustomId('open_ticket')
