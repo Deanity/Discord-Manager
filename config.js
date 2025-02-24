@@ -1,4 +1,4 @@
 module.exports = {
-    welcomeChannelID: '1335122622643572757', // Ganti dengan ID channel welcome
-    goodbyeChannelID: '1335122622643572757', // Ganti dengan ID channel goodbye
+    welcomeChannelID: '1343505923892838471', // Ganti dengan ID channel welcome
+    goodbyeChannelID: '1343506025768026174', // Ganti dengan ID channel goodbye
 };
