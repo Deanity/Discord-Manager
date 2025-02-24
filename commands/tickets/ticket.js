@@ -34,7 +34,7 @@ module.exports = {
             // const channelName = `ticket-${ticketCounter++}`;
 
             const ticketChannel = await interaction.guild.channels.create({
-                name: `ticket-${ticketCounter}`,
+                name: `ticket-${ticketCounter++}`,
                 type: 0, // Gunakan 0 untuk Text Channel
                 parent: CATEGORY_ID, // Ganti dengan ID kategori yang sesuai
                 permissionOverwrites: [
