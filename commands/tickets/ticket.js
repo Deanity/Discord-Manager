@@ -62,7 +62,7 @@ module.exports = {
             });
 
             // Kirim pesan mention untuk notifikasi ke Owner dan Co-Owner
-            await ticketChannel.send(`🔔 Hai <@&${OWNER_ROLE_ID}> dan <@&${CO_OWNER_ROLE_ID}> \n Tiket baru telah dibuat oleh <@${interaction.user.id}>!`);
+            await ticketChannel.send(`<@&${OWNER_ROLE_ID}> dan <@&${CO_OWNER_ROLE_ID}> \n Tiket baru telah dibuat oleh <@${interaction.user.id}>!`);
 
             // Membuat embed untuk detail tiket
             const embed = new EmbedBuilder()
