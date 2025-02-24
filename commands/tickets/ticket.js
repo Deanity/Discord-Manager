@@ -31,7 +31,7 @@ module.exports = {
 
     async handleButton(interaction, client) {
         if (interaction.customId === 'create_ticket') {
-            const channelName = `ticket-${ticketCounter++}`;
+            // const channelName = `ticket-${ticketCounter++}`;
 
             const ticketChannel = await interaction.guild.channels.create({
                 name: `ticket-${ticketCounter}`,
