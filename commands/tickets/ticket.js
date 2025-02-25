@@ -17,6 +17,10 @@ module.exports = {
         .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels),
 
     async execute(interaction) {
+        if (interaction.user.id !== interaction.guild.ownerId) {
+            return interaction.reply({ content: '❌ Hanya pemilik server yang dapat menggunakan perintah ini.', ephemeral: true });
+        }
+
         const embed = new EmbedBuilder()
             .setTitle('🎫 Ticket Support')
             .setDescription('Klik tombol di bawah untuk membuat tiket.')
