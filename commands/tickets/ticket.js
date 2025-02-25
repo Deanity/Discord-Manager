@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, PermissionsBitField } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, PermissionFlagsBits } = require('discord.js');
 
 // Konstanta yang digunakan
 const CATEGORY_ID = '1343504030382428293';
@@ -13,7 +13,8 @@ let ticketCounter = 1;
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('ticket')
-        .setDescription('Buat tiket baru.'),
+        .setDescription('Buat tiket baru.')
+        .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels),
 
     async execute(interaction) {
         const embed = new EmbedBuilder()
