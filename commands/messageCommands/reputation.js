@@ -44,13 +44,12 @@ module.exports = {
 
             const embed = {
                 color: 0x00FF00,
-                title: 'Reputasi Ditambahkan! 🎉',
-                description: `<@${giver.id}> telah menambahkan reputasi untuk <@${mentionedUser.id}>.`,
+                description: `🎉 <@${giver.id}> memberi reputasi kepada <@${mentionedUser.id}>!`,
                 fields: [
-                    { name: 'Jumlah Reputasi', value: `${reputationData[mentionedUser.id]}`, inline: true },
+                    { name: '⭐ Reputasi Sekarang', value: `${reputationData[mentionedUser.id]}`, inline: true },
                 ],
                 timestamp: new Date(),
-            };
+            };            
 
             await message.reply({ embeds: [embed] });
         }
