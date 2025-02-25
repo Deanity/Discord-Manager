@@ -46,7 +46,7 @@ module.exports = {
                 color: 0x00FF00,
                 description: `<@${giver.id}> memberi reputasi kepada <@${mentionedUser.id}>!`,
                 fields: [
-                    { name: 'Reputasi Sekarang : ', value: `${reputationData[mentionedUser.id]}`, inline: false },
+                    { name: 'Reputasi Sekarang : ', value: `${reputationData[mentionedUser.id]}`},
                 ],
                 timestamp: new Date(),
             };            
