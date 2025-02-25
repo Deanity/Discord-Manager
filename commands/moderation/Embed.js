@@ -7,6 +7,10 @@ module.exports = {
         .setDefaultMemberPermissions(PermissionFlagsBits.SendMessages),
     async execute(interaction) {
 
+        if (interaction.user.id !== interaction.guild.ownerId) {
+            return interaction.reply({ content: '❌ Hanya pemilik server yang dapat menggunakan perintah ini.', ephemeral: true });
+        }
+
         const randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
         const embed = new EmbedBuilder()
