@@ -5,7 +5,7 @@ const { EmbedBuilder } = require('discord.js');
 const toxicWords = ['kontol', 'anjeng', 'anj', 'kntl', 'pepek', 'ppk', 'asu', 'KONTOL']; // Ganti dengan daftar kata-kata toxic
 
 // ID channel untuk log (ganti dengan ID channel log-toxic di server Anda)
-const logChannelId = '1335122622643572757'; // Ganti dengan ID channel log-toxic
+const logChannelId = '1344128985663017020'; // Ganti dengan ID channel log-toxic
 
 module.exports = {
     name: 'messageCreate',
