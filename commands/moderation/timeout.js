@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, PermissionFlagsBits, EmbedBuilder } = require('discord.js');
 
-const logChannelID = '1335122622643572757'; // Ganti dengan ID channel log
+const logChannelID = '1344129169126064128'; // Ganti dengan ID channel log
 
 module.exports = {
   data: new SlashCommandBuilder()
